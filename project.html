@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            width: 100%;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .project-a {
+            color: white;
+            text-decoration: none;
+            padding: 0;
+        }
+        .navbar .project-a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .nav-links {
+            display: flex;
+        }
+        .navbar .nav-links a {
+            margin-right: 10px;
+        }
+        .navbar .nav-links a.active{
+            background-color: #ddd;
+            color:#333;
+        }
+        .projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+        }
+        .projects h1 {
+            margin-bottom: 20px;
+        }
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f4f4;
+            width: 80%;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            align-items: center;
+        }
+        .project-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .project-card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .project-card p {
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .navbar .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #333;
+                padding: 10px 0;
+                z-index: 1;
+            }
+            .navbar .nav-links.active {
+                display: flex;
+            }
+            .navbar .nav-links a {
+                margin: 0;
+                text-align: center;
+                border-top: 1px solid #444;
+                width: 100%;
+            }
+            .project-card {
+                width: 100%;
+            }
+            .navbar .hamburger {
+                display: block;
+                cursor: pointer;
+                color: white;
+                background-color: #ddd;
+                font-size: 24px;
+                padding: 10px;
+            }
+        }
+        
+        .navbar .hamburger {
+            color: #333;
+            }
+        .logo img {
+            width: 50px; 
+            height: auto;
+        }
+        
+        .logo a:hover {
+            background-color: transparent;
+            color: white;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: #333;
+            background-color: inherit;
+            cursor: pointer;
+            padding: 14px 51px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="asset/img/logo.png" alt="Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" >Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="project.html" class="project-a active"><button class="dropbtn">Projects</button></a>
+                <div class="dropdown-content">
+                    <a href="project.html#stcinema">ST Cinema</a>
+                    <a href="project.html#project">Project:FORMS</a>
+                    <a href="project.html#library">Library System</a>
+                    <a href="project.html#pizza">Pizza Point</a>
+                    <a href="project.html#art">Art Carousel</a>
+                    
+                </div>
+            </div>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    <div class="hamburger" onclick="toggleNavbar()">
+        &#9776;
+    </div>
+</nav>
+<script>
+    function toggleNavbar() {
+        var navLinks = document.querySelector('.navbar .nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
+<div class="projects">
+<div id="stcinema" class="projects">
+        <h3>ST CINEMA</h3>
+        <div class="project-card">
+            <img src="asset/img/Screenshot_2024-06-28_174733-removebg-preview.png" alt="ST Cinema Image">
+            <div>
+                <h2>ST Cinema</h2>
+                <p><b>ST Cinema</b> is a comprehensive cinema website where you can conveniently book tickets to watch the latest blockbusters and classic films. Our platform allows you to browse upcoming releases, check showtimes, and select your preferred seats, all from the comfort of your home. Enjoy a seamless and user-friendly ticketing experience with ST Cinema, ensuring you never miss out on your favorite movies.</p>
+                <p style="color: lightgreen;"><b>Finished</b></p>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <img src="asset/img/st.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/stsign.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/st4.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/st5.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/st6.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/st7.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/st2.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/st8.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/st3.png" alt="ST Cinema Image">
+        </div>
+    
+    </div>
+    <div id="project" class="projects">
+        <h3>PROJECT:FORMS</h3>
+        <div class="project-card">
+            <img src="asset/img/sign-up (1).png" alt="Project:FORMS Image">
+            <div>
+                <h2>Project:FORMS</h2>
+                <p><b>Project:FORMS</b> is a Friendly Online Request Management System.</p>
+                <p><b>Project:FORMS</b> is a comprehensive platform designed to streamline your academic administrative tasks. Here, you can easily request enrollment forms and other essential educational documents required for your enrollment process. Additionally, the website allows you to check your grades and access a copy of your certificate of enrollment, providing a one-stop solution for all your academic needs.</p>
+                <p><b>Project:FORMS</b> provides a user-friendly platform to manage all your academic requirements efficiently and conveniently.</p>
+                <p style="color: lightgreen;"><b>Finished</b></p>
+            </div>
+        </div>
+       
+        <div class="project-card">
+            <img src="asset/img/forms.png" alt="Project:FORMS Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/form_login.png" alt="Project:FORMS Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/forms2.png" alt="Project:FORMS Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/forms3.png" alt="Project:FORMS Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/forms_admin.png" alt="ST Cinema Image">
+        </div>
+        
+    </div>
+   
+    <div id="library" class="projects">
+        <h3>LIBRARY SYSTEM</h3>
+        <div class="project-card">
+            <img src="asset/img/books.png" alt="Project One Image">
+            <div>
+                <h2>Library System</h2>
+                <p>The <b>Library System</b> website provides an efficient platform for users to borrow books, where they can easily log into library rooms using a QR code and check detailed availability information such as current stock levels and the maximum number of books they can borrow at any given time. This streamlined process ensures a user-friendly experience for managing library resources and accessing educational materials.</p>
+                <p style="color: lightgreen;"><b>Finished</b></p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="asset/img/lib_front.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/lib.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/lib_scan.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/lib2.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/lib3.png" alt="ST Cinema Image">
+        </div>
+    </div>
+
+    <div id="pizza" class="projects">
+        <h3>PIZZA POINT</h3>
+        <div class="project-card">
+            <img src="asset/img/logo2.png" alt="Project Two Image">
+            <div>
+                <h2>Pizza Point</h2>
+                <p><b>Pizza Point</b> simplifies the pizza ordering experience through its user-friendly website, allowing customers to explore a diverse menu and order their favorite pizzas with ease, ensuring prompt delivery or pickup options.</p>
+                <p style="color: lightgreen;"><b>Finished</b></p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="asset/img/pizza1.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/pizza2.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/pizza3.png" alt="ST Cinema Image">
+        </div>
+    </div>
+    <div id="art" class="projects">
+        <h3>ART CAROUSEL</h3> 
+        <div class="project-card">
+            <img src="asset/img/logo1.png" alt="Project Three Image">
+            <div>
+                <h2>Art Carousel</h2>
+                <p><b>Art Carousel</b> is a dynamic online hub where art enthusiasts can discover and purchase a wide range of artworks, sell their own creations, and conveniently shop for art materials and supplies, fostering a vibrant community of artists and art lovers alike.</p>
+                <p style="color:red;"><b>Ongoing</b></p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="asset/img/landing.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/login.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/reg.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/painting.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/details.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/community.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/artist.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/profile.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/cart.png" alt="ST Cinema Image">
+        </div>
+        <div class="project-card">
+            <img src="asset/img/checkout.png" alt="ST Cinema Image">
+        </div>
+    </div>
+</div>
+</body>
+</html>

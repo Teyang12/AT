@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV/Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            width: 100%;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .project-a {
+            color: white;
+            text-decoration: none;
+            padding: 0;
+        }
+        .navbar .project-a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .nav-links {
+            display: flex;
+        }
+        .navbar .nav-links a {
+            margin-right: 10px;
+        }
+        .navbar .nav-links a.active{
+            background-color: #ddd;
+            color:#333;
+        }
+        .resume {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .resume .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .resume .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .resume h1 {
+            margin-bottom: 0;
+        }
+        .resume .contact-info {
+            margin-bottom: 20px;
+        }
+        .section {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        .section ul li .date {
+            font-weight: bold;
+        }
+        .section ul li .details {
+            margin-left: 20px;
+        }
+        .logo img {
+            width: 50px;
+            height: auto;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: inherit;
+            cursor: pointer;
+            padding: 14px 51px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        @media (max-width: 600px) {
+            .navbar .nav-links {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                display: none; 
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #333;
+                padding: 10px 0;
+                z-index: 1;
+            }
+            .navbar .nav-links.active {
+                display: flex;
+            }
+            .navbar .nav-links a {
+                margin: 0;
+                text-align: center;
+                border-top: 1px solid #444;
+                width: 100%;
+            }
+            .resume {
+                width: 100%;
+                padding: 10px;
+            }
+            .resume .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            .resume .profile img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .navbar .hamburger {
+                display: block;
+                cursor: pointer;
+                color: white;
+                background-color: #ddd;
+                font-size: 24px;
+                padding: 10px;
+            }
+        }
+        
+        .navbar .hamburger {
+            color: #333;
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="asset/img/logo.png" alt="Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" >Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="project.html" class="project-a"><button class="dropbtn">Projects</button></a>
+                <div class="dropdown-content">
+                    <a href="project.html#stcinema">ST Cinema</a>
+                    <a href="project.html#project">Project:FORMS</a>
+                    <a href="project.html#library">Library System</a>
+                    <a href="project.html#pizza">Pizza Point</a>
+                    <a href="project.html#art">Art Carousel</a>
+                    
+                </div>
+            </div>
+            <a href="resume.html"class="active">Resume</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="hamburger" onclick="toggleNavbar()">
+            &#9776;
+        </div>
+    </nav>
+
+    <div class="resume">
+        <div class="profile">
+            <img src="asset/img/2x2pic.png" alt="Profile Picture" style="border:solid 2px black">
+            <div>
+                <h1>Althea D. Amistoso</h1>
+                <div class="contact-info">
+                    <p>Blk 6 Lot 10 Kalayaan Homes Molino 2 Bacoor City, Cavite</p>
+                    <p>altheaamistoso13@gmail.com</p>
+                    <p>09678641416</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Career Objectives</h2>
+            <p>As a passionate and ambitious IT student, my primary objective is to leverage my technical skills and academic knowledge to make a significant impact in the IT field. I seek a challenging position in a reputable organization where I can apply my expertise in software development, network management, and cybersecurity to drive technological advancements and improve operational efficiency.</p>
+            <p>I am committed to continuous learning and professional development, staying updated with industry trends and emerging technologies. By obtaining relevant certifications and engaging in hands-on projects, I aim to enhance my technical proficiency and problem-solving skills.</p>
+            <p>Professionalism is central to my career aspirations, as I strive to uphold high standards of integrity, reliability, and ethical conduct. I am dedicated to collaborative teamwork, fostering mutual respect and innovation, and contributing to successful project completion and organizational goals.</p>
+            <p>In summary, I aim to excel in the IT industry by continuously expanding my knowledge, honing my technical skills, and demonstrating unwavering professionalism, while making meaningful contributions to the field and advancing my career in an innovative and excellence-driven environment.</p>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <div class="date">
+                        <p>Tertiary</p>
+                    </div>
+                    <div class="details">Cavite State University- Bacoor Campus
+                    Bachelor Of Science in Information Technology
+                    — 2024- present</div>
+                </li>
+                <li>
+                    <div class="date">
+                        <p>Senior High School</p>
+                    </div>
+                    <div class="details">University of Perpetual Help System DALTA – Molino
+                    — 2020-2021</div>
+                </li>
+                <li>
+                    <div class="date">
+                        <p>Junior High School</p>
+                    </div>
+                    <div class="details"> BNHS – Villa Maria Annex
+                    — 2018-2019</div>
+                </li>
+                <li>
+                    <div class="date">
+                        <p>Primary</p>
+                    </div>
+                    <div class="details"> Molino Elementary School
+                    — 2014-2015</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Skills/Personal Characteristics</h2>
+            <ul>
+                <li>● Communication</li>
+                <li>● Social</li>
+                <li>● Responsibility</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <div class="date"><h3>ST CINEMA</h3></div>
+                    <div class="details">
+                        <p><b>ST Cinema</b> is a comprehensive cinema website where you can conveniently book tickets to watch the latest blockbusters and classic films. Our platform allows you to browse upcoming releases, check showtimes, and select your preferred seats, all from the comfort of your home. Enjoy a seamless and user-friendly ticketing experience with ST Cinema, ensuring you never miss out on your favorite movies.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="date"><h3>Project:FORMS</h3></div>
+                    <div class="details">
+                        <p><b>Project:FORMS</b> is a comprehensive platform designed to streamline your academic administrative tasks. Here, you can easily request enrollment forms and other essential educational documents required for your enrollment process. Additionally, the website allows you to check your grades and access a copy of your certificate of enrollment, providing a one-stop solution for all your academic needs.</p>
+                        <p><b>Project:FORMS</b> provides a user-friendly platform to manage all your academic requirements efficiently and conveniently.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="date"><h3>Library System</h3></div>
+                    <div class="details">
+                        <p>The <b>Library System</b> website provides an efficient platform for users to borrow books, where they can easily log into library rooms using a QR code and check detailed availability information such as current stock levels and the maximum number of books they can borrow at any given time. This streamlined process ensures a user-friendly experience for managing library resources and accessing educational materials.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="date"><h3>Pizza Point</h3></div>
+                    <div class="details">
+                        <p><b>Pizza Point</b> simplifies the pizza ordering experience through its user-friendly website, allowing customers to explore a diverse menu and order their favorite pizzas with ease, ensuring prompt delivery or pickup options.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="date"><h3>Art Carousel</h3></div>
+                    <div class="details">
+                        <p><b>Art Carousel</b> is a dynamic online hub where art enthusiasts can discover and purchase a wide range of artworks, sell their own creations, and conveniently shop for art materials and supplies, fostering a vibrant community of artists and art lovers alike.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Character Reference</h2>
+            <ul>
+                <li><b>Name:</b> Allene D. Amistoso</li>
+                <li><b>Phone Number:</b> 09675141789</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleNavbar() {
+            const navLinks = document.querySelector('.navbar .nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
